@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Add GraphQL to SpringBoot"
-date: 2020-12-28
+date: 2014-04-31
 tags: [ "SpringBoot", "GraphQL", "API" ]
 ---
 
-<h1>Add GraphQL to SpringBoot</h1>
-
+<p>My blog</p>
 
 
