@@ -1,7 +1,11 @@
 ---
 layout: post
-title: "Hank Quinlan, Horrible Cop, Launches Site"
-date: 2014-04-30
+title: "Add GraphQL to SpringBoot"
+date: 2020-12-28
+tags: [ "SpringBoot", "GraphQL", "API" ]
 ---
 
-Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
+<h1>Add GraphQL to SpringBoot</h1>
+
+
+
