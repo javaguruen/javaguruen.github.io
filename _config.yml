@@ -1,8 +1,14 @@
 name: Bjørn Hamre
-markdown: kramdown
 
 permalink: /blog/:year/:month/:day/:title
 posts: _posts
 
-#markdown: kramdown
-#highlighter: rouge
+fenced_code_blocks: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
