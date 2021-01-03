@@ -7,6 +7,9 @@ tags: [ "SpringBoot", "GraphQL", "API" ]
 <p>Add GraphQl to Spring-boot
 The example in this blog post is implemented using Spring-boot version 2.3.4.RELEASE. The following dependencies are added to my maven project:
 
+<h2>Dependencies</h2>
+Note that the versions of these dependencies can have changed by the time your read this.
+
 {% highlight xml %}
 <dependency>
     <groupId>com.graphql-java</groupId>
@@ -25,21 +28,40 @@ The example in this blog post is implemented using Spring-boot version 2.3.4.REL
 </dependency>
 {% endhighlight %}
 
-<p>
-```javascript
+<h2>The schema</h2>
 
-function test() {
-    console.log("test");
+<p>Add the schema as a file named <code>schema.graphqls</code> in the `src/main/resources` folder of your project 
+
+{% highlight graphql %}
+type Query {
+    "Søk etter whisky. Kan søke på navn og produsent"
+    soek(name: String): [Whisky]
 }
-```
 
+type Whisky {
+    id: ID!,
+    datotid: String!,
+    "Identificator for a product at vinmonopolet.no"
+    varenummer: String!,
+    varenavn: String!,
+    varetype: String!,
+    volum: Float!,
+    land: String!,
+    distrikt: String,
+    underdistrikt: String,
+    "Distillery"
+    produsent: String!,
+    priser: [Pris]!
+}
 
-```xml
+type Pris{
+    id: ID!,
+    datotid: String!,
+    varenummer: String!,
+    volum: Float!,
+    pris: Float!,
+    literpris: Float!
+}
 
-<dependency>
-    <groupId>com.graphql-java</groupId>
-    <artifactId>graphql-java</artifactId>
-    <version>16.1</version>
-</dependency>
-```    
+{% endhighlight %}
 </p>
