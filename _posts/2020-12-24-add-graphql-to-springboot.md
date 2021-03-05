@@ -146,7 +146,7 @@ class GraphQLDataFetchers(private val dao: Dao) {
   fun soek(): DataFetcher<*> {
     return DataFetcher { dataFetchingEnvironment: DataFetchingEnvironment ->
       val name = dataFetchingEnvironment.getArgument<String>("name")
-      dao.query(name) //List<Product>
+      dao.query(name) //List<Whisky>
     }
   }
 
@@ -155,7 +155,7 @@ class GraphQLDataFetchers(private val dao: Dao) {
       //Get the parent object (source) for which we will find the prices
       val whisky: Product = dataFetchingEnvironment.getSource()
       val productId = whisky.id
-      dao.findPrices(productId = productId) //List<Price>
+      dao.findPrices(productId = productId) //List<Pris>
     }
   }
 }
@@ -174,5 +174,3 @@ In short, you need to:
   <li>Wire requests to data fetchers</li>
   <li>Fetch data</li>
 </ul>
-
-## Heading2
