@@ -51,4 +51,4 @@ mvn biz.lermitage.oga:oga-maven-plugin:check
 {% endhighlight %}
 
 The plugin also has options for an alternative list of renamed artifacts and
-all configuration can be given commandline or in the `plugin` configuration in the `pom.xml` file.
+all configuration can be given commandline or in the `<plugin>` configuration in the `pom.xml` file.
