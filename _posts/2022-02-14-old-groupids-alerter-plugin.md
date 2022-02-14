@@ -18,20 +18,23 @@ as new artifacts with a different groupId and artifactId.
 The [README.md](https://github.com/jonathanlermitage/oga-maven-plugin) at github offers a simple overview over possible options and configurations.
 I will not copy their README here, but the simple usage is:
 Run 
-```
+{% highlight %}
+
 mvn biz.lermitage.oga:oga-maven-plugin:check
-```
+{% endhighlight %}
+
+
 The plugin will fail on the
 first error with text like:
-```
+{% highlight text %}
 [ERROR] (dependency) 'org.apache.httpcomponents:httpclient'
     should be replaced by 'org.apache.httpcomponents.client5:httpclient5'
     (context: Maven group id changed to ‘org.apache.httpcomponents.client5’.)
-```
+{% endhighlight %}
 
 As this is a transitive dependency managed by Spring-Boot, I will not change it before the Spring project changes it's dependencies. I can ignore this one by adding
 it to a local ignore list, like `ogaIgnore.json`:
-```json
+{% highlight json %}
 {
     "ignoreList": [
         {
@@ -39,13 +42,13 @@ it to a local ignore list, like `ogaIgnore.json`:
         }
     ]
 }
-```
+{% endhighlight %}
 
 Now rerun the plugin 
-```
+{% highlight text %}
 mvn biz.lermitage.oga:oga-maven-plugin:check 
 -DignoreListFile=ogaIgnore.json
-```
+{% endhighlight %}
 
 The plugin also has options for an alternative list of renamed artifacts and
 all configuration can be given commandline or in the `plugin` configuration in the `pom.xml` file.
