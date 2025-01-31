@@ -115,3 +115,5 @@ If your site enforces a [Content Security Policy](https://developer.mozilla.org/
 
 1. In `base.njk`, remove `<style>{% getBundle "css" %}</style>` and uncomment `<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">`
 2. Configure the server with the CSP directive `style-src: 'unsafe-inline'` (less secure).
+
+dsd
